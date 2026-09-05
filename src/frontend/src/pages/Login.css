@@ -1,0 +1,819 @@
+/* =========================================================
+   MUNEEM LOGIN
+   ========================================================= */
+
+.muneem-login {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  background: #f5f5f2;
+  color: #111111;
+
+  font-family:
+    Inter,
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+}
+
+
+/* =========================================================
+   TOP NAV
+   ========================================================= */
+
+.login-nav {
+  height: 80px;
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 42px;
+
+  border-bottom: 1px solid #d8d8d4;
+
+  background: #f5f5f2;
+}
+
+.login-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.login-logo-box {
+  width: 40px;
+  height: 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 10px;
+
+  background: #111111;
+  color: #ffffff;
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.login-logo > span {
+  color: #111111;
+
+  font-size: 15px;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+}
+
+.login-nav-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  color: #777773;
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.13em;
+}
+
+.login-nav-dot {
+  width: 7px;
+  height: 7px;
+
+  border-radius: 50%;
+
+  background: #22c55e;
+}
+
+
+/* =========================================================
+   MAIN
+   ========================================================= */
+
+.login-hero {
+  flex: 1;
+  min-height: 0;
+
+  display: grid;
+
+  /* Wider black panel */
+  grid-template-columns: minmax(0, 1.7fr) minmax(500px, 0.9fr);
+}
+
+
+/* =========================================================
+   LEFT INTRO
+   ========================================================= */
+
+.login-intro {
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  padding: 68px 58px 48px;
+
+  background: #f5f5f2;
+}
+
+.login-intro-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  color: #777773;
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
+.login-location {
+  color: #777773;
+}
+
+
+/* =========================================================
+   MAIN HEADLINE
+   ========================================================= */
+
+.login-headline {
+  /*
+     Previously this used auto margins which pushed the
+     headline too far down.
+
+     We now deliberately position it higher.
+  */
+  margin-top: 105px;
+  margin-bottom: 0;
+
+  padding: 0;
+
+  overflow: visible;
+}
+
+.login-headline p,
+.login-headline h1 {
+  margin: 0;
+  padding: 0;
+
+  font-family:
+    Inter,
+    ui-sans-serif,
+    system-ui,
+    sans-serif;
+
+  font-weight: 900;
+
+  letter-spacing: -0.075em;
+
+  line-height: 0.82;
+}
+
+.login-headline p {
+  margin-bottom: 2px;
+
+  color: #111111;
+
+  font-size: clamp(62px, 6.2vw, 104px);
+}
+
+.login-headline h1 {
+  color: #111111;
+
+  font-size: clamp(70px, 7.1vw, 120px);
+}
+
+.login-headline .login-outline {
+  color: transparent;
+
+  -webkit-text-stroke: 1.5px #111111;
+}
+
+
+/* =========================================================
+   LEFT BOTTOM COPY
+   ========================================================= */
+
+.login-intro-bottom {
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  max-width: 900px;
+
+  margin-top: auto;
+}
+
+.login-accent-block {
+  flex-shrink: 0;
+
+  color: #111111;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 16px;
+  line-height: 1;
+}
+
+.login-intro-bottom p {
+  margin: 0;
+
+  color: #222222;
+
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+
+/* =========================================================
+   RIGHT LOGIN PANEL
+   ========================================================= */
+
+.login-panel {
+  min-width: 0;
+
+  background: #111111;
+  color: #ffffff;
+}
+
+.login-panel-inner {
+  min-height: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  /*
+     Reduced left/right padding so the content sits
+     farther toward the left and the panel feels broader.
+  */
+  padding: 68px 48px 38px;
+}
+
+
+/* =========================================================
+   PANEL HEADER
+   ========================================================= */
+
+.login-panel-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  color: #ffffff;
+}
+
+.login-small-label {
+  color: #ffffff;
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.11em;
+}
+
+.login-live {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  color: #999995;
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.login-live > span {
+  width: 6px;
+  height: 6px;
+
+  flex-shrink: 0;
+
+  border-radius: 50%;
+
+  background: #22c55e;
+}
+
+
+/* =========================================================
+   PANEL HEADING
+   ========================================================= */
+
+.login-card-heading {
+  margin-top: 72px;
+}
+
+.login-card-heading h2 {
+  margin: 0;
+
+  color: #ffffff;
+
+  font-family:
+    Inter,
+    ui-sans-serif,
+    system-ui,
+    sans-serif;
+
+  font-size: clamp(58px, 5vw, 82px);
+
+  font-weight: 400;
+
+  line-height: 0.88;
+
+  letter-spacing: -0.065em;
+}
+
+.login-card-heading p {
+  max-width: 360px;
+
+  margin: 24px 0 0;
+
+  color: #999995;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+
+/* =========================================================
+   FORM
+   ========================================================= */
+
+.muneem-login-form {
+  margin-top: 55px;
+
+  width: 100%;
+}
+
+.login-field {
+  margin-bottom: 32px;
+}
+
+.login-field label {
+  display: block;
+
+  margin-bottom: 18px;
+
+  color: #aaa9a4;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 8px;
+  font-weight: 700;
+
+  letter-spacing: 0.13em;
+}
+
+.login-field input {
+  width: 100%;
+  height: 48px;
+
+  padding: 0;
+
+  border: none;
+  border-bottom: 1px solid #444444;
+
+  outline: none;
+
+  border-radius: 0;
+
+  background: transparent;
+  color: #ffffff;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 13px;
+}
+
+.login-field input::placeholder {
+  color: #777773;
+  opacity: 1;
+}
+
+.login-field input:focus {
+  border-bottom-color: #ffffff;
+}
+
+
+/* =========================================================
+   ERROR
+   ========================================================= */
+
+.login-error {
+  display: flex;
+  align-items: center;
+
+  gap: 9px;
+
+  margin: -5px 0 18px;
+
+  color: #f87171;
+
+  font-size: 9px;
+
+  line-height: 1.5;
+}
+
+.login-error span {
+  width: 16px;
+  height: 16px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  border: 1px solid #f87171;
+
+  border-radius: 50%;
+
+  font-size: 9px;
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   SUCCESS
+   ========================================================= */
+
+.login-success {
+  display: flex;
+  align-items: center;
+
+  gap: 9px;
+
+  margin: -5px 0 18px;
+
+  color: #22c55e;
+
+  font-size: 9px;
+
+  line-height: 1.5;
+}
+
+.login-success span {
+  width: 16px;
+  height: 16px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  border: 1px solid #22c55e;
+
+  border-radius: 50%;
+
+  font-size: 9px;
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   SUBMIT BUTTON
+   ========================================================= */
+
+.login-submit {
+  width: 100%;
+  height: 64px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-top: 8px;
+
+  padding: 0 22px;
+
+  border: none;
+
+  border-radius: 9px;
+
+  background: #ffffff;
+  color: #111111;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 10px;
+  font-weight: 700;
+
+  letter-spacing: 0.03em;
+
+  transition:
+    background 160ms ease,
+    transform 160ms ease;
+}
+
+.login-submit:hover:not(:disabled) {
+  background: #eeeeeb;
+}
+
+.login-submit:active:not(:disabled) {
+  transform: translateY(1px);
+}
+
+.login-submit:disabled {
+  opacity: 0.6;
+
+  cursor: not-allowed;
+}
+
+.login-arrow {
+  font-size: 14px;
+}
+
+
+/* =========================================================
+   LOGIN / SIGNUP SWITCH
+   ========================================================= */
+
+.login-mode-switch {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-top: 18px;
+  padding-top: 18px;
+
+  border-top: 1px solid #333333;
+
+  color: #777773;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 9px;
+
+  line-height: 1.4;
+}
+
+.login-mode-switch button {
+  padding: 0;
+
+  border: none;
+
+  background: transparent;
+  color: #ffffff;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 8px;
+  font-weight: 700;
+
+  letter-spacing: 0.08em;
+
+  cursor: pointer;
+}
+
+.login-mode-switch button:hover {
+  text-decoration: underline;
+}
+
+
+/* =========================================================
+   PANEL FOOTER
+   ========================================================= */
+
+.login-panel-footer {
+  display: flex;
+
+  gap: 4px;
+
+  margin-top: auto;
+  padding-top: 35px;
+
+  color: #777773;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 8px;
+  font-weight: 700;
+
+  letter-spacing: 0.09em;
+}
+
+
+/* =========================================================
+   BOTTOM BAR
+   ========================================================= */
+
+.login-bottom {
+  height: 58px;
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+
+  gap: 30px;
+
+  padding: 0 45px;
+
+  border-top: 1px solid #d8d8d4;
+
+  background: #f5f5f2;
+
+  color: #777773;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 8px;
+  font-weight: 700;
+
+  letter-spacing: 0.08em;
+}
+
+.login-bottom-copy {
+  margin-left: auto;
+}
+
+
+/* =========================================================
+   LARGE DESKTOP
+   ========================================================= */
+
+@media (min-width: 1500px) {
+
+  .login-intro {
+    padding-left: 64px;
+    padding-right: 64px;
+  }
+
+  .login-panel-inner {
+    padding-left: 48px;
+    padding-right: 48px;
+  }
+
+  .login-headline {
+    margin-top: 92px;
+  }
+
+  .login-headline p {
+    font-size: 100px;
+  }
+
+  .login-headline h1 {
+    font-size: 116px;
+  }
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1000px) {
+
+  .login-hero {
+    grid-template-columns: 1fr;
+  }
+
+  .login-intro {
+    min-height: 520px;
+  }
+
+  .login-panel {
+    min-height: 650px;
+  }
+
+  .login-card-heading {
+    margin-top: 55px;
+  }
+
+  .login-headline {
+    margin-top: 55px;
+    margin-bottom: 45px;
+  }
+
+  .login-headline p {
+    font-size: 70px;
+  }
+
+  .login-headline h1 {
+    font-size: 78px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+  .login-nav {
+    height: 68px;
+
+    padding: 0 20px;
+  }
+
+  .login-logo-box {
+    width: 34px;
+    height: 34px;
+
+    border-radius: 8px;
+
+    font-size: 14px;
+  }
+
+  .login-logo > span {
+    font-size: 13px;
+  }
+
+  .login-nav-right {
+    font-size: 7px;
+  }
+
+  .login-intro {
+    min-height: auto;
+
+    padding: 38px 22px 45px;
+  }
+
+  .login-intro-top {
+    font-size: 8px;
+  }
+
+  .login-headline {
+    margin-top: 55px;
+    margin-bottom: 55px;
+  }
+
+  .login-headline p {
+    font-size: 53px;
+  }
+
+  .login-headline h1 {
+    font-size: 58px;
+  }
+
+  .login-intro-bottom {
+    align-items: flex-start;
+  }
+
+  .login-intro-bottom p {
+    font-size: 11px;
+  }
+
+  .login-panel {
+    min-height: auto;
+  }
+
+  .login-panel-inner {
+    padding: 42px 22px 35px;
+  }
+
+  .login-panel-header {
+    font-size: 8px;
+  }
+
+  .login-card-heading {
+    margin-top: 55px;
+  }
+
+  .login-card-heading h2 {
+    font-size: 57px;
+  }
+
+  .login-card-heading p {
+    font-size: 10px;
+  }
+
+  .muneem-login-form {
+    margin-top: 45px;
+  }
+
+  .login-bottom {
+    height: auto;
+    min-height: 55px;
+
+    flex-wrap: wrap;
+
+    gap: 16px;
+
+    padding: 17px 22px;
+
+    font-size: 7px;
+  }
+
+  .login-bottom-copy {
+    width: 100%;
+
+    margin-left: 0;
+  }
+}

@@ -1,0 +1,878 @@
+/* =========================================================
+   MUNEEM REVENUE
+   ========================================================= */
+
+.revenue-page {
+  width: 100%;
+  max-width: 1440px;
+
+  margin: 0 auto;
+
+  padding: 52px 48px 72px;
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.revenue-header {
+  display: flex;
+
+  align-items: flex-end;
+  justify-content: space-between;
+
+  gap: 30px;
+
+  padding-bottom: 44px;
+
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.revenue-eyebrow {
+  margin: 0 0 14px;
+
+  color: #a3a3a3;
+
+  font-size: 10px;
+  font-weight: 750;
+
+  letter-spacing: 0.14em;
+
+  text-transform: uppercase;
+}
+
+.revenue-header h1 {
+  margin: 0;
+
+  color: #171717;
+
+  font-size: clamp(42px, 5vw, 62px);
+
+  font-weight: 600;
+
+  letter-spacing: -0.065em;
+
+  line-height: 0.98;
+}
+
+.revenue-subtitle {
+  max-width: 560px;
+
+  margin: 18px 0 0;
+
+  color: #737373;
+
+  font-size: 14px;
+
+  line-height: 1.7;
+}
+
+.revenue-header-status {
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  padding: 10px 12px;
+
+  background: #ffffff;
+
+  border: 1px solid #e5e5e5;
+
+  border-radius: 8px;
+
+  color: #737373;
+
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.revenue-status-dot {
+  width: 6px;
+  height: 6px;
+
+  border-radius: 50%;
+
+  background: #16a34a;
+
+  box-shadow:
+    0 0 0 3px #dcfce7;
+}
+
+
+/* =========================================================
+   PRIMARY REVENUE
+   ========================================================= */
+
+.revenue-primary {
+  display: grid;
+
+  grid-template-columns:
+    1.5fr
+    1fr
+    1fr;
+
+  margin-top: 28px;
+
+  overflow: hidden;
+
+  background: #ffffff;
+
+  border: 1px solid #e5e5e5;
+
+  border-radius: 16px;
+}
+
+.revenue-primary-main,
+.revenue-primary-side {
+  min-height: 190px;
+
+  padding: 30px;
+}
+
+.revenue-primary-main {
+  background: #171717;
+
+  color: #ffffff;
+}
+
+.revenue-primary-side {
+  border-left: 1px solid #e5e5e5;
+}
+
+.revenue-primary-main span,
+.revenue-primary-side span {
+  display: block;
+
+  font-size: 9px;
+  font-weight: 750;
+
+  letter-spacing: 0.12em;
+
+  text-transform: uppercase;
+}
+
+.revenue-primary-main span {
+  color: #a3a3a3;
+}
+
+.revenue-primary-side span {
+  color: #a3a3a3;
+}
+
+.revenue-primary-main strong,
+.revenue-primary-side strong {
+  display: block;
+
+  margin-top: 22px;
+
+  font-size: 31px;
+  font-weight: 650;
+
+  letter-spacing: -0.045em;
+}
+
+.revenue-primary-main strong {
+  color: #ffffff;
+}
+
+.revenue-primary-side strong {
+  color: #171717;
+}
+
+.revenue-primary-main p,
+.revenue-primary-side p {
+  margin: 10px 0 0;
+
+  font-size: 10px;
+}
+
+.revenue-primary-main p {
+  color: #8f8f8f;
+}
+
+.revenue-primary-side p {
+  color: #a3a3a3;
+}
+
+
+/* =========================================================
+   SECTIONS
+   ========================================================= */
+
+.revenue-section {
+  margin-top: 64px;
+}
+
+.revenue-section-header {
+  display: flex;
+
+  align-items: flex-end;
+  justify-content: space-between;
+
+  gap: 30px;
+
+  margin-bottom: 22px;
+}
+
+.revenue-kicker {
+  margin: 0 0 8px;
+
+  color: #a3a3a3;
+
+  font-size: 9px;
+  font-weight: 750;
+
+  letter-spacing: 0.14em;
+
+  text-transform: uppercase;
+}
+
+.revenue-section-header h2 {
+  margin: 0;
+
+  color: #171717;
+
+  font-size: 23px;
+  font-weight: 620;
+
+  letter-spacing: -0.04em;
+}
+
+.revenue-section-header > p {
+  max-width: 360px;
+
+  margin: 0;
+
+  color: #a3a3a3;
+
+  font-size: 11px;
+
+  line-height: 1.55;
+
+  text-align: right;
+}
+
+
+/* =========================================================
+   RECOVERY OVERVIEW
+   ========================================================= */
+
+.recovery-overview {
+  display: grid;
+
+  grid-template-columns:
+    1.2fr 2fr;
+
+  overflow: hidden;
+
+  background: #ffffff;
+
+  border: 1px solid #e5e5e5;
+
+  border-radius: 14px;
+}
+
+.recovery-value {
+  padding: 30px;
+
+  background: #fafafa;
+
+  border-right: 1px solid #e5e5e5;
+}
+
+.recovery-value span,
+.recovery-value strong,
+.recovery-value p {
+  display: block;
+}
+
+.recovery-value span {
+  color: #8a8a8a;
+
+  font-size: 9px;
+  font-weight: 750;
+
+  letter-spacing: 0.1em;
+}
+
+.recovery-value strong {
+  margin-top: 18px;
+
+  color: #171717;
+
+  font-size: 34px;
+  font-weight: 650;
+
+  letter-spacing: -0.05em;
+}
+
+.recovery-value p {
+  margin: 9px 0 0;
+
+  color: #a3a3a3;
+
+  font-size: 10px;
+}
+
+.recovery-breakdown {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  align-items: center;
+}
+
+.recovery-breakdown > div {
+  padding: 30px;
+
+  border-right: 1px solid #eeeeee;
+}
+
+.recovery-breakdown > div:last-child {
+  border-right: 0;
+}
+
+.recovery-breakdown span,
+.recovery-breakdown strong {
+  display: block;
+}
+
+.recovery-breakdown span {
+  color: #a3a3a3;
+
+  font-size: 9px;
+  font-weight: 700;
+
+  letter-spacing: 0.08em;
+}
+
+.recovery-breakdown strong {
+  margin-top: 12px;
+
+  color: #171717;
+
+  font-size: 20px;
+  font-weight: 650;
+
+  letter-spacing: -0.03em;
+}
+
+.recovery-breakdown .recovered-value {
+  color: #15803d;
+}
+
+
+/* =========================================================
+   PROGRESS
+   ========================================================= */
+
+.recovery-progress {
+  margin-top: 14px;
+
+  padding: 20px 22px;
+
+  background: #ffffff;
+
+  border: 1px solid #e5e5e5;
+
+  border-radius: 12px;
+}
+
+.recovery-progress-label {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+}
+
+.recovery-progress-label span {
+  color: #737373;
+
+  font-size: 10px;
+}
+
+.recovery-progress-label strong {
+  color: #171717;
+
+  font-size: 11px;
+}
+
+.recovery-progress-track {
+  height: 6px;
+
+  margin-top: 12px;
+
+  overflow: hidden;
+
+  background: #eeeeee;
+
+  border-radius: 999px;
+}
+
+.recovery-progress-fill {
+  height: 100%;
+
+  min-width: 0;
+
+  background: #171717;
+
+  border-radius: inherit;
+
+  transition: width 500ms ease;
+}
+
+.recovery-progress p {
+  margin: 9px 0 0;
+
+  color: #a3a3a3;
+
+  font-size: 9px;
+}
+
+
+/* =========================================================
+   SIGNALS
+   ========================================================= */
+
+.revenue-signals {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  gap: 14px;
+}
+
+.revenue-signal {
+  display: flex;
+
+  gap: 18px;
+
+  min-height: 190px;
+
+  padding: 24px;
+
+  background: #ffffff;
+
+  border: 1px solid #e5e5e5;
+
+  border-radius: 14px;
+
+  transition:
+    transform 180ms ease,
+    border-color 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.revenue-signal:hover {
+  transform: translateY(-2px);
+
+  border-color: #d4d4d4;
+
+  box-shadow:
+    0 10px 28px rgba(0, 0, 0, 0.04);
+}
+
+.signal-number {
+  color: #c4c4c4;
+
+  font-size: 9px;
+  font-weight: 700;
+}
+
+.signal-label {
+  display: block;
+
+  color: #a3a3a3;
+
+  font-size: 9px;
+  font-weight: 750;
+
+  letter-spacing: 0.1em;
+}
+
+.revenue-signal strong {
+  display: block;
+
+  margin-top: 14px;
+
+  color: #171717;
+
+  font-size: 25px;
+  font-weight: 650;
+
+  letter-spacing: -0.04em;
+}
+
+.revenue-signal p {
+  max-width: 220px;
+
+  margin: 9px 0 0;
+
+  color: #8a8a8a;
+
+  font-size: 10px;
+
+  line-height: 1.55;
+}
+
+
+/* =========================================================
+   MUNEEM INSIGHT
+   ========================================================= */
+
+.revenue-insight {
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 20px;
+
+  margin-top: 64px;
+
+  padding: 30px;
+
+  background: #171717;
+
+  border-radius: 14px;
+
+  color: #ffffff;
+}
+
+.revenue-insight-mark {
+  width: 38px;
+  height: 38px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  border: 1px solid #404040;
+
+  border-radius: 9px;
+
+  color: #ffffff;
+
+  font-size: 13px;
+  font-weight: 750;
+}
+
+.revenue-insight-content > span {
+  display: block;
+
+  color: #8f8f8f;
+
+  font-size: 9px;
+  font-weight: 750;
+
+  letter-spacing: 0.14em;
+}
+
+.revenue-insight-content h2 {
+  max-width: 680px;
+
+  margin: 12px 0 0;
+
+  color: #ffffff;
+
+  font-size: 27px;
+  font-weight: 600;
+
+  letter-spacing: -0.04em;
+}
+
+.revenue-insight-content p {
+  max-width: 650px;
+
+  margin: 10px 0 0;
+
+  color: #8f8f8f;
+
+  font-size: 11px;
+
+  line-height: 1.65;
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.revenue-footer {
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, 1fr);
+
+  margin-top: 64px;
+
+  padding-top: 26px;
+
+  border-top: 1px solid #dcdcdc;
+}
+
+.revenue-footer > div {
+  padding: 0 22px;
+
+  border-right: 1px solid #e5e5e5;
+}
+
+.revenue-footer > div:first-child {
+  padding-left: 0;
+}
+
+.revenue-footer > div:last-child {
+  border-right: 0;
+}
+
+.revenue-footer span,
+.revenue-footer strong {
+  display: block;
+}
+
+.revenue-footer span {
+  color: #a3a3a3;
+
+  font-size: 9px;
+  font-weight: 700;
+
+  letter-spacing: 0.1em;
+}
+
+.revenue-footer strong {
+  margin-top: 8px;
+
+  color: #171717;
+
+  font-size: 20px;
+  font-weight: 650;
+
+  letter-spacing: -0.035em;
+}
+
+
+/* =========================================================
+   LOADING / ERROR
+   ========================================================= */
+
+.revenue-state {
+  min-height: calc(100vh - 72px);
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 40px;
+
+  text-align: center;
+}
+
+.revenue-spinner {
+  width: 23px;
+  height: 23px;
+
+  margin-bottom: 15px;
+
+  border: 2px solid #e5e5e5;
+
+  border-top-color: #171717;
+
+  border-radius: 50%;
+
+  animation:
+    revenue-spin 700ms linear infinite;
+}
+
+.revenue-state-icon {
+  width: 40px;
+  height: 40px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 14px;
+
+  background: #f5f5f3;
+
+  border-radius: 50%;
+
+  color: #525252;
+
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.revenue-state h2 {
+  margin: 0;
+
+  color: #171717;
+
+  font-size: 20px;
+}
+
+.revenue-state p {
+  max-width: 420px;
+
+  margin: 8px 0 20px;
+
+  color: #737373;
+
+  font-size: 12px;
+
+  line-height: 1.6;
+}
+
+@keyframes revenue-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 1050px) {
+  .revenue-page {
+    padding: 42px 32px 60px;
+  }
+
+  .revenue-primary {
+    grid-template-columns:
+      1fr 1fr;
+  }
+
+  .revenue-primary-main {
+    grid-column: span 2;
+  }
+
+  .revenue-primary-side:first-of-type {
+    border-left: 0;
+    border-top: 1px solid #e5e5e5;
+  }
+
+  .revenue-primary-side:last-of-type {
+    border-top: 1px solid #e5e5e5;
+  }
+
+  .recovery-overview {
+    grid-template-columns: 1fr;
+  }
+
+  .recovery-value {
+    border-right: 0;
+
+    border-bottom: 1px solid #e5e5e5;
+  }
+
+  .revenue-signals {
+    grid-template-columns:
+      1fr 1fr;
+  }
+
+  .revenue-signal:last-child {
+    grid-column: span 2;
+  }
+}
+
+
+@media (max-width: 760px) {
+  .revenue-header {
+    align-items: flex-start;
+
+    flex-direction: column;
+  }
+
+  .revenue-section-header {
+    align-items: flex-start;
+
+    flex-direction: column;
+  }
+
+  .revenue-section-header > p {
+    text-align: left;
+  }
+
+  .recovery-breakdown {
+    grid-template-columns: 1fr;
+  }
+
+  .recovery-breakdown > div {
+    border-right: 0;
+
+    border-bottom: 1px solid #eeeeee;
+  }
+
+  .recovery-breakdown > div:last-child {
+    border-bottom: 0;
+  }
+
+  .revenue-footer {
+    grid-template-columns:
+      1fr 1fr;
+
+    gap: 22px;
+  }
+
+  .revenue-footer > div {
+    padding: 0;
+
+    border-right: 0;
+  }
+}
+
+
+@media (max-width: 560px) {
+  .revenue-page {
+    padding: 30px 16px 50px;
+  }
+
+  .revenue-primary {
+    grid-template-columns: 1fr;
+  }
+
+  .revenue-primary-main {
+    grid-column: auto;
+  }
+
+  .revenue-primary-side {
+    border-left: 0;
+
+    border-top: 1px solid #e5e5e5;
+  }
+
+  .revenue-signals {
+    grid-template-columns: 1fr;
+  }
+
+  .revenue-signal:last-child {
+    grid-column: auto;
+  }
+
+  .revenue-insight {
+    padding: 24px;
+
+    flex-direction: column;
+  }
+
+  .revenue-insight-content h2 {
+    font-size: 23px;
+  }
+
+  .revenue-footer {
+    grid-template-columns: 1fr;
+  }
+}

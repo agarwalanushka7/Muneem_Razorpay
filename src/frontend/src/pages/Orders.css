@@ -1,0 +1,1055 @@
+/* =========================================================
+   MUNEEM — ORDERS
+   Editorial Merchant Console
+   ========================================================= */
+
+.orders-page {
+  width: 100%;
+  min-height: calc(100vh - 76px);
+
+  background: #f5f5f2;
+  color: #111111;
+}
+
+.orders-page *,
+.orders-page *::before,
+.orders-page *::after {
+  box-sizing: border-box;
+}
+
+.orders-page h1,
+.orders-page h2,
+.orders-page h3,
+.orders-page p {
+  margin: 0;
+}
+
+.orders-page button {
+  font-family: inherit;
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.orders-hero {
+  padding: 58px 5.2vw 68px;
+
+  border-bottom: 1px solid #d8d8d4;
+}
+
+.orders-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 70px;
+
+  color: #999995;
+
+  font-size: 8px;
+  font-weight: 700;
+
+  letter-spacing: 0.14em;
+}
+
+.orders-hero-grid {
+  display: grid;
+
+  grid-template-columns:
+    minmax(430px, 1.25fr)
+    minmax(270px, 0.7fr)
+    minmax(190px, 0.45fr);
+
+  gap: 55px;
+
+  align-items: end;
+}
+
+.orders-title > p {
+  margin-bottom: 14px;
+
+  color: #777773;
+
+  font-size: 9px;
+  font-weight: 700;
+
+  letter-spacing: 0.14em;
+}
+
+.orders-title h1 {
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: clamp(66px, 7vw, 112px);
+  font-weight: 800;
+
+  line-height: 0.82;
+
+  letter-spacing: -0.075em;
+}
+
+.orders-title h1 em {
+  color: transparent;
+
+  font-style: normal;
+
+  -webkit-text-stroke: 1.2px #111111;
+}
+
+.orders-description {
+  padding-bottom: 5px;
+}
+
+.orders-description strong {
+  display: block;
+
+  margin-bottom: 12px;
+
+  font-size: 9px;
+  font-weight: 800;
+
+  letter-spacing: 0.08em;
+}
+
+.orders-description p {
+  max-width: 350px;
+
+  color: #777773;
+
+  font-size: 11px;
+
+  line-height: 1.7;
+}
+
+.orders-summary {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  border-left: 1px solid #d8d8d4;
+}
+
+.orders-summary > div {
+  padding-left: 20px;
+}
+
+.orders-summary > div + div {
+  border-left: 1px solid #d8d8d4;
+}
+
+.orders-summary span {
+  color: #999995;
+
+  font-size: 8px;
+  font-weight: 700;
+
+  letter-spacing: 0.13em;
+}
+
+.orders-summary strong {
+  display: block;
+
+  margin-top: 10px;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 32px;
+
+  line-height: 1;
+}
+
+
+/* =========================================================
+   SNAPSHOT
+   ========================================================= */
+
+.orders-snapshot {
+  display: grid;
+
+  grid-template-columns:
+    80px
+    minmax(250px, 0.7fr)
+    minmax(0, 1.5fr);
+
+  gap: 35px;
+
+  padding: 68px 5.2vw;
+
+  border-bottom: 1px solid #d8d8d4;
+}
+
+.orders-section-number {
+  color: #777773;
+
+  font-size: 9px;
+  font-weight: 700;
+
+  letter-spacing: 0.12em;
+}
+
+.orders-section-heading > span {
+  display: block;
+
+  margin-bottom: 18px;
+
+  color: #999995;
+
+  font-size: 8px;
+  font-weight: 700;
+
+  letter-spacing: 0.14em;
+}
+
+.orders-section-heading h2 {
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: clamp(38px, 4vw, 58px);
+  font-weight: 800;
+
+  line-height: 0.9;
+
+  letter-spacing: -0.06em;
+}
+
+.orders-section-heading h2 em {
+  color: transparent;
+
+  font-style: normal;
+
+  -webkit-text-stroke: 1px #111111;
+}
+
+.orders-section-heading p {
+  max-width: 280px;
+
+  margin-top: 20px;
+
+  color: #777773;
+
+  font-size: 10px;
+
+  line-height: 1.65;
+}
+
+
+/* =========================================================
+   METRICS
+   ========================================================= */
+
+.orders-metrics {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  border-top: 1px solid #d8d8d4;
+}
+
+.order-metric {
+  padding: 25px 22px 0 0;
+}
+
+.order-metric + .order-metric {
+  padding-left: 22px;
+
+  border-left: 1px solid #d8d8d4;
+}
+
+.order-metric > span {
+  display: block;
+
+  color: #999995;
+
+  font-size: 8px;
+  font-weight: 700;
+
+  letter-spacing: 0.13em;
+}
+
+.order-metric > strong {
+  display: block;
+
+  margin-top: 14px;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: clamp(32px, 3vw, 46px);
+
+  line-height: 1;
+
+  letter-spacing: -0.04em;
+}
+
+.order-metric > p {
+  max-width: 220px;
+
+  margin-top: 12px;
+
+  color: #777773;
+
+  font-size: 9px;
+
+  line-height: 1.55;
+}
+
+.order-status-split {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  margin-top: 14px;
+}
+
+.order-status-split > div {
+  padding-right: 18px;
+}
+
+.order-status-split > div + div {
+  padding-left: 18px;
+
+  border-left: 1px solid #d8d8d4;
+}
+
+.order-status-split strong {
+  display: block;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 32px;
+
+  line-height: 1;
+}
+
+.order-status-split span {
+  display: block;
+
+  margin-top: 8px;
+
+  color: #999995;
+
+  font-size: 7px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.12em;
+}
+
+
+/* =========================================================
+   ORDER LEDGER
+   ========================================================= */
+
+.orders-list-section {
+  display: grid;
+
+  grid-template-columns:
+    80px
+    minmax(250px, 0.7fr)
+    minmax(0, 1.5fr);
+
+  gap: 35px;
+
+  padding: 68px 5.2vw;
+
+  border-bottom: 1px solid #d8d8d4;
+}
+
+.orders-table-wrapper {
+  min-width: 0;
+}
+
+.orders-table-top {
+  min-height: 55px;
+
+  display: flex;
+
+  align-items: flex-start;
+  justify-content: space-between;
+
+  padding-top: 14px;
+
+  border-top: 1px solid #d8d8d4;
+}
+
+.orders-table-top > div > span {
+  display: block;
+
+  color: #999995;
+
+  font-size: 8px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.14em;
+}
+
+.orders-table-top strong {
+  display: block;
+
+  margin-top: 6px;
+
+  color: #555551;
+
+  font-size: 8px;
+
+  letter-spacing: 0.05em;
+}
+
+.orders-refresh {
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  padding: 0;
+
+  border: 0;
+
+  background: transparent;
+
+  color: #555551;
+
+  font-size: 8px;
+
+  font-weight: 800;
+
+  letter-spacing: 0.08em;
+
+  cursor: pointer;
+}
+
+.orders-refresh:hover {
+  color: #111111;
+}
+
+.orders-refresh span {
+  font-size: 15px;
+}
+
+
+/* =========================================================
+   TABLE
+   ========================================================= */
+
+.orders-table {
+  border-top: 1px solid #d8d8d4;
+}
+
+.orders-table-header,
+.order-row {
+  display: grid;
+
+  grid-template-columns:
+    38px
+    minmax(130px, 1fr)
+    minmax(150px, 1.1fr)
+    105px
+    95px
+    120px;
+
+  gap: 16px;
+
+  align-items: center;
+}
+
+.orders-table-header {
+  min-height: 43px;
+
+  border-bottom: 1px solid #d8d8d4;
+}
+
+.orders-table-header span {
+  color: #aaa9a4;
+
+  font-size: 7px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.12em;
+}
+
+.order-row {
+  min-height: 125px;
+
+  padding: 20px 0;
+
+  border-bottom: 1px solid #d8d8d4;
+
+  transition: background-color 160ms ease;
+}
+
+.order-row:hover {
+  background: #eeeeea;
+}
+
+.order-index {
+  align-self: start;
+
+  padding-top: 3px;
+
+  color: #aaa9a4;
+
+  font-size: 8px;
+
+  font-weight: 700;
+}
+
+.order-identity h3 {
+  font-size: 12px;
+
+  font-weight: 700;
+
+  letter-spacing: -0.015em;
+}
+
+.order-identity p {
+  margin-top: 6px;
+
+  color: #999995;
+
+  font-size: 8px;
+}
+
+
+/* =========================================================
+   DETAILS
+   ========================================================= */
+
+.order-details {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.order-details > div {
+  padding-right: 10px;
+}
+
+.order-details > div + div {
+  padding-left: 10px;
+
+  border-left: 1px solid #d8d8d4;
+}
+
+.order-details span,
+.order-value > span {
+  display: block;
+
+  color: #aaa9a4;
+
+  font-size: 7px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.1em;
+}
+
+.order-details strong {
+  display: block;
+
+  margin-top: 7px;
+
+  color: #555551;
+
+  font-size: 9px;
+
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   VALUE
+   ========================================================= */
+
+.order-value strong {
+  display: block;
+
+  margin-top: 7px;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 17px;
+
+  letter-spacing: -0.025em;
+}
+
+
+/* =========================================================
+   STATUS
+   ========================================================= */
+
+.order-status {
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+}
+
+.order-status-dot {
+  width: 6px;
+  height: 6px;
+
+  flex-shrink: 0;
+
+  border-radius: 50%;
+
+  background: #eab308;
+}
+
+.order-status-dot.paid {
+  background: #22c55e;
+}
+
+.order-status strong {
+  color: #666666;
+
+  font-size: 8px;
+
+  font-weight: 700;
+
+  text-transform: capitalize;
+}
+
+
+/* =========================================================
+   PAYMENT
+   ========================================================= */
+
+.order-payment {
+  display: flex;
+
+  justify-content: flex-end;
+}
+
+.order-payment button {
+  min-height: 36px;
+
+  border-radius: 4px;
+}
+
+
+/* =========================================================
+   EMPTY
+   ========================================================= */
+
+.orders-empty {
+  padding: 65px 0;
+
+  border-bottom: 1px solid #d8d8d4;
+}
+
+.orders-empty > span {
+  display: block;
+
+  color: #999995;
+
+  font-size: 8px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.14em;
+}
+
+.orders-empty h3 {
+  margin-top: 15px;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 34px;
+
+  line-height: 0.95;
+
+  letter-spacing: -0.05em;
+}
+
+.orders-empty p {
+  max-width: 380px;
+
+  margin-top: 11px;
+
+  color: #777773;
+
+  font-size: 10px;
+
+  line-height: 1.6;
+}
+
+
+/* =========================================================
+   BLACK INSIGHT
+   ========================================================= */
+
+.orders-insight {
+  display: grid;
+
+  grid-template-columns:
+    80px
+    minmax(280px, 0.8fr)
+    minmax(0, 1fr);
+
+  gap: 35px;
+
+  padding: 75px 5.2vw;
+
+  background: #111111;
+
+  color: #ffffff;
+}
+
+.orders-insight .orders-section-number {
+  color: #666666;
+}
+
+.orders-insight-label {
+  display: block;
+
+  color: #777777;
+
+  font-size: 8px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.14em;
+}
+
+.orders-insight h2 {
+  margin-top: 18px;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: clamp(42px, 4vw, 64px);
+
+  line-height: 0.87;
+
+  letter-spacing: -0.06em;
+}
+
+.orders-insight h2 em {
+  color: transparent;
+
+  font-style: normal;
+
+  -webkit-text-stroke: 1px #ffffff;
+}
+
+.orders-insight-copy {
+  align-self: end;
+}
+
+.orders-insight-copy > p {
+  max-width: 410px;
+
+  color: #858585;
+
+  font-size: 11px;
+
+  line-height: 1.7;
+}
+
+.orders-insight-stats {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  margin-top: 40px;
+
+  border-top: 1px solid #303030;
+}
+
+.orders-insight-stats > div {
+  padding-top: 17px;
+}
+
+.orders-insight-stats > div + div {
+  padding-left: 20px;
+
+  border-left: 1px solid #303030;
+}
+
+.orders-insight-stats strong {
+  display: block;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 25px;
+
+  line-height: 1;
+}
+
+.orders-insight-stats span {
+  display: block;
+
+  margin-top: 8px;
+
+  color: #777777;
+
+  font-size: 7px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.1em;
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.orders-footer {
+  min-height: 58px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 28px;
+
+  padding: 0 5.2vw;
+
+  border-top: 1px solid #d8d8d4;
+
+  color: #999995;
+
+  font-size: 8px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.12em;
+}
+
+.orders-footer span {
+  margin-left: auto;
+
+  color: #aaa9a4;
+
+  font-size: 7px;
+}
+
+
+/* =========================================================
+   LOADING / ERROR
+   ========================================================= */
+
+.orders-state {
+  min-height: calc(100vh - 76px);
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  padding: 70px 5.2vw;
+
+  background: #f5f5f2;
+}
+
+.orders-state > span {
+  color: #999995;
+
+  font-size: 8px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.13em;
+}
+
+.orders-state h1 {
+  margin-top: 20px;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: clamp(60px, 7vw, 105px);
+
+  font-weight: 800;
+
+  line-height: 0.82;
+
+  letter-spacing: -0.075em;
+}
+
+.orders-state h1 em {
+  color: transparent;
+
+  font-style: normal;
+
+  -webkit-text-stroke: 1px #111111;
+}
+
+.orders-state p {
+  max-width: 400px;
+
+  margin-top: 25px;
+
+  color: #888884;
+
+  font-size: 11px;
+}
+
+.orders-retry {
+  width: 160px;
+
+  height: 45px;
+
+  margin-top: 25px;
+
+  border: 0;
+
+  border-radius: 5px;
+
+  background: #111111;
+
+  color: #ffffff;
+
+  font-size: 8px;
+
+  font-weight: 800;
+
+  letter-spacing: 0.08em;
+
+  cursor: pointer;
+}
+
+.orders-retry:hover {
+  background: #292929;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 1250px) {
+
+  .orders-hero-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .orders-summary {
+    grid-column: 1 / -1;
+
+    max-width: 300px;
+
+    border-left: 0;
+
+    border-top: 1px solid #d8d8d4;
+
+    padding-top: 20px;
+  }
+
+  .orders-snapshot,
+  .orders-list-section,
+  .orders-insight {
+    grid-template-columns:
+      60px
+      1fr;
+  }
+
+  .orders-metrics,
+  .orders-table-wrapper,
+  .orders-insight-copy {
+    grid-column: 2;
+  }
+
+  .orders-metrics {
+    margin-top: 35px;
+  }
+
+  .orders-table-wrapper {
+    margin-top: 35px;
+
+    overflow-x: auto;
+  }
+
+  .orders-table {
+    min-width: 850px;
+  }
+}
+
+
+@media (max-width: 700px) {
+
+  .orders-hero {
+    padding: 40px 24px 50px;
+  }
+
+  .orders-meta {
+    margin-bottom: 50px;
+  }
+
+  .orders-hero-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .orders-title h1 {
+    font-size: 68px;
+  }
+
+  .orders-summary {
+    grid-column: auto;
+  }
+
+  .orders-snapshot,
+  .orders-list-section,
+  .orders-insight {
+    display: block;
+
+    padding: 52px 24px;
+  }
+
+  .orders-section-number {
+    margin-bottom: 28px;
+  }
+
+  .orders-metrics {
+    display: block;
+
+    margin-top: 35px;
+  }
+
+  .order-metric {
+    padding: 22px 0;
+  }
+
+  .order-metric + .order-metric {
+    padding-left: 0;
+
+    border-left: 0;
+
+    border-top: 1px solid #d8d8d4;
+  }
+
+  .orders-table-wrapper {
+    margin-top: 35px;
+  }
+
+  .orders-insight-copy {
+    margin-top: 40px;
+  }
+
+  .orders-insight-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .orders-insight-stats > div + div {
+    padding-left: 0;
+
+    border-left: 0;
+
+    border-top: 1px solid #303030;
+  }
+
+  .orders-footer {
+    padding: 0 24px;
+  }
+
+  .orders-footer div {
+    display: none;
+  }
+
+  .orders-footer span {
+    margin-left: 0;
+  }
+}

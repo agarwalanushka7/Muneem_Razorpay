@@ -1,0 +1,1028 @@
+/* =========================================================
+   MUNEEM — AGENT ACTIONS
+   Editorial merchant-console UI
+   ========================================================= */
+
+.agent-page {
+  min-height: 100vh;
+  background: #f5f5f1;
+  color: #111;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.agent-page *,
+.agent-page *::before,
+.agent-page *::after {
+  box-sizing: border-box;
+}
+
+.agent-page button,
+.agent-page a {
+  font: inherit;
+}
+
+.agent-meta,
+.agent-footer,
+.agent-row-label,
+.agent-history-top,
+.agent-history-title {
+  letter-spacing: .08em;
+}
+
+.agent-meta {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 22px 5.2vw;
+  border-bottom: 1px solid #d7d7d2;
+  color: #858580;
+  font-size: 9px;
+  font-weight: 800;
+}
+
+.agent-hero {
+  padding: 58px 5.2vw 72px;
+  border-bottom: 1px solid #d7d7d2;
+}
+
+.agent-hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.7fr) minmax(150px, .65fr) minmax(130px, .45fr);
+  gap: 34px;
+  align-items: end;
+}
+
+.agent-title p,
+.agent-description strong,
+.agent-summary span,
+.agent-section-heading > span,
+.agent-metric > span,
+.agent-queue-top span,
+.agent-row-value > span,
+.agent-row-approval > span,
+.agent-message-heading span,
+.agent-execution > div > span,
+.agent-history-top span,
+.agent-history-meta span,
+.agent-insight-label {
+  display: block;
+  color: #8b8b85;
+  font-size: 8px;
+  font-weight: 800;
+  letter-spacing: .14em;
+}
+
+.agent-title p {
+  margin-bottom: 18px;
+}
+
+.agent-title h1 {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(62px, 7vw, 108px);
+  font-weight: 400;
+  line-height: .82;
+  letter-spacing: -.075em;
+}
+
+.agent-title h1 em,
+.agent-section-heading h2 em,
+.agent-insight h2 em {
+  color: transparent;
+  font-style: normal;
+  -webkit-text-stroke: 1px #111;
+}
+
+.agent-description {
+  padding-bottom: 5px;
+}
+
+.agent-description strong {
+  margin-bottom: 12px;
+  color: #111;
+}
+
+.agent-description p {
+  max-width: 330px;
+  margin: 0;
+  color: #666661;
+  font-size: 11px;
+  line-height: 1.7;
+}
+
+.agent-summary {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-left: 1px solid #d7d7d2;
+}
+
+.agent-summary > div {
+  padding-left: 20px;
+}
+
+.agent-summary > div + div {
+  border-left: 1px solid #d7d7d2;
+}
+
+.agent-summary strong {
+  display: block;
+  margin-top: 10px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 34px;
+  font-weight: 400;
+}
+
+.agent-error,
+.agent-success {
+  margin: 0 5.2vw;
+  padding: 14px 18px;
+  border-bottom: 1px solid #d7d7d2;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  font-size: 11px;
+}
+
+.agent-error { color: #9a2424; }
+.agent-success { color: #176a42; }
+
+.agent-overview,
+.agent-queue,
+.agent-send-history {
+  display: grid;
+  grid-template-columns: 52px minmax(230px, .62fr) minmax(0, 1.65fr);
+  gap: 30px;
+  padding: 64px 4vw;
+  border-bottom: 1px solid #d7d7d2;
+}
+
+.agent-section-number {
+  color: #9a9a94;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: .14em;
+}
+
+.agent-section-heading h2 {
+  margin: 18px 0 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(38px, 4vw, 62px);
+  font-weight: 400;
+  line-height: .88;
+  letter-spacing: -.06em;
+}
+
+.agent-section-heading p {
+  max-width: 280px;
+  margin: 22px 0 0;
+  color: #858580;
+  font-size: 10px;
+  line-height: 1.65;
+}
+
+.agent-metrics {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-top: 1px solid #d7d7d2;
+}
+
+.agent-metric {
+  padding: 22px 20px 0;
+}
+
+.agent-metric + .agent-metric {
+  border-left: 1px solid #d7d7d2;
+}
+
+.agent-metric > strong {
+  display: block;
+  margin-top: 15px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 42px;
+  font-weight: 400;
+  letter-spacing: -.05em;
+}
+
+.agent-metric p {
+  max-width: 190px;
+  margin: 14px 0 0;
+  color: #8a8a85;
+  font-size: 9px;
+  line-height: 1.6;
+}
+
+.agent-pipeline {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 12px;
+}
+
+.agent-pipeline > div {
+  padding: 5px 15px;
+}
+
+.agent-pipeline > div + div {
+  border-left: 1px solid #d7d7d2;
+}
+
+.agent-pipeline strong {
+  display: block;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 30px;
+  font-weight: 400;
+}
+
+.agent-pipeline span {
+  display: block;
+  margin-top: 7px;
+  color: #999993;
+  font-size: 7px;
+  font-weight: 800;
+  letter-spacing: .1em;
+}
+
+.agent-queue-content,
+.agent-history-content {
+  min-width: 0;
+}
+
+.agent-queue-top,
+.agent-history-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: end;
+  padding-bottom: 17px;
+  border-bottom: 1px solid #d7d7d2;
+}
+
+.agent-queue-top strong,
+.agent-history-top strong {
+  display: block;
+  margin-top: 7px;
+  font-size: 9px;
+  font-weight: 800;
+}
+
+.agent-refresh {
+  border: 0;
+  background: none;
+  color: #555550;
+  cursor: pointer;
+  font-size: 8px;
+  font-weight: 800;
+  letter-spacing: .12em;
+}
+
+.agent-refresh span {
+  display: inline;
+  margin-left: 8px;
+  font-size: 16px;
+}
+
+.agent-list {
+  border-top: 0;
+}
+
+.agent-row {
+  display: grid;
+  grid-template-columns: 28px minmax(280px, 1fr) 105px 105px 268px;
+  gap: 14px;
+  align-items: start;
+  padding: 28px 0;
+  border-bottom: 1px solid #d7d7d2;
+  transition: transform .2s ease, background .2s ease;
+}
+
+.agent-row:hover {
+  background: rgba(255,255,255,.35);
+}
+
+.agent-row-index {
+  color: #a2a29c;
+  font-size: 8px;
+  font-weight: 800;
+}
+
+.agent-row-label {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 13px;
+}
+
+.agent-row-label > span {
+  color: #777772;
+  font-size: 8px;
+  font-weight: 800;
+}
+
+.agent-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #8a8a85;
+  font-size: 7px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.agent-status i {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #aaa;
+}
+
+.status-pending_approval i { background: #c88920; }
+.status-executed i { background: #21865a; }
+.status-rejected i,
+.status-blocked i { background: #b53838; }
+.status-approved i { background: #555; }
+
+.agent-row-main h3 {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(27px, 2.5vw, 39px);
+  font-weight: 400;
+  line-height: .95;
+  letter-spacing: -.045em;
+}
+
+.agent-row-main p {
+  max-width: 430px;
+  margin: 13px 0 0;
+  color: #777772;
+  font-size: 10px;
+  line-height: 1.6;
+}
+
+.agent-row-main small {
+  display: block;
+  margin-top: 10px;
+  color: #999993;
+  font-size: 8px;
+}
+
+.agent-row-value strong,
+.agent-row-approval strong {
+  display: block;
+  margin-top: 10px;
+  color: #111;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 23px;
+  font-weight: 400;
+  letter-spacing: -.035em;
+}
+
+.agent-row-value small {
+  display: block;
+  margin-top: 7px;
+  color: #999993;
+  font-size: 8px;
+}
+
+.agent-row-actions {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 9px;
+  width: 317px;
+  min-width: 317px;
+}
+
+/* =========================================================
+   ACTION / PAYMENT BUTTONS
+   One consistent font, size and alignment.
+   ========================================================= */
+
+.agent-payment-actions a,
+.agent-copy-link,
+.agent-reject,
+.agent-approve {
+  box-sizing: border-box;
+  height: 40px;
+  min-height: 40px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0 14px;
+  border-radius: 0;
+
+  font-family: inherit;
+  font-size: 8px;
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  white-space: nowrap;
+
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.agent-payment-actions a {
+  width: 154px;
+  min-width: 154px;
+  border: 1px solid #111;
+  background: #111;
+  color: #fff;
+}
+
+.agent-copy-link {
+  width: 154px;
+  min-width: 154px;
+  border: 1px solid #111;
+  background: transparent;
+  color: #111;
+}
+
+.agent-reject {
+  width: 112px;
+  min-width: 112px;
+  border: 1px solid #c8c8c3;
+  background: transparent;
+  color: #111;
+}
+
+.agent-approve {
+  width: 136px;
+  min-width: 136px;
+  border: 1px solid #111;
+  background: #111;
+  color: #fff;
+}
+
+.agent-reject:hover,
+.agent-approve:hover,
+.agent-payment-actions a:hover,
+.agent-copy-link:hover {
+  transform: translateY(-1px);
+}
+
+.agent-copy-link:disabled,
+.agent-reject:disabled,
+.agent-approve:disabled {
+  cursor: not-allowed;
+  opacity: .55;
+  transform: none;
+}
+
+/* The fifth grid column contains either the two approval buttons
+   or the approved/executed status. It now has exactly enough room
+   for the controls without pushing them outside the card. */
+.agent-row-actions {
+  width: 268px;
+  min-width: 268px;
+  max-width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.agent-row-actions .agent-reject,
+.agent-row-actions .agent-approve {
+  flex: 0 0 auto;
+}
+
+.agent-payment {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 25px;
+  flex-wrap: nowrap;
+}
+
+.agent-payment-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: nowrap;
+  gap: 10px;
+  flex: 0 0 auto;
+}
+
+.agent-approved,
+.agent-executed {
+  display: inline-flex;
+  align-items: center;
+  min-height: 40px;
+  color: #277451;
+  font-size: 8px;
+  font-weight: 900;
+  letter-spacing: .08em;
+  white-space: nowrap;
+}
+
+/* =========================================================
+   PERSONALIZED OFFER
+   ========================================================= */
+
+.agent-execution:not(.agent-payment) > div:nth-child(2) {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  margin-top: 22px;
+}
+
+.agent-execution:not(.agent-payment) > div:nth-child(2) > div {
+  display: grid;
+  grid-template-columns: 95px minmax(0, 1fr);
+  column-gap: 20px;
+  align-items: baseline;
+  min-height: 25px;
+}
+
+.agent-execution:not(.agent-payment) > div:nth-child(2) > div > span {
+  margin: 0;
+  color: #777772;
+  font-size: 8px;
+  font-weight: 800;
+  letter-spacing: .12em;
+}
+
+.agent-execution:not(.agent-payment) > div:nth-child(2) > div > strong {
+  margin: 0;
+  color: #111;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 21px;
+  font-weight: 400;
+  letter-spacing: -.025em;
+}
+
+.agent-execution:not(.agent-payment) > div:first-child > strong {
+  display: block;
+  margin-top: 8px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 25px;
+  font-weight: 400;
+  letter-spacing: -.035em;
+}
+
+.agent-execution {
+  grid-column: 2 / -1;
+  margin-top: 2px;
+  padding: 22px 0 2px;
+  border-top: 1px solid #deded9;
+}
+
+.agent-message-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+}
+
+.agent-message-heading .agent-executed {
+  min-height: 0;
+  color: #277451;
+}
+
+.agent-email-body {
+  max-width: 690px;
+  margin-top: 18px;
+  padding: 22px 24px;
+  background: #fff;
+  border: 1px solid #e1e1dc;
+}
+
+.agent-email-body p {
+  margin: 0 0 10px;
+  color: #555550;
+  font-size: 10px;
+  line-height: 1.7;
+}
+
+.agent-email-body p:last-child {
+  margin-bottom: 0;
+}
+
+.agent-payment {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 25px;
+}
+
+.agent-payment > div > strong {
+  display: block;
+  margin-top: 8px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 25px;
+  font-weight: 400;
+}
+
+.agent-payment-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.agent-payment-actions a {
+  background: #111;
+  color: #fff;
+}
+
+.agent-copy-link {
+  background: transparent;
+  color: #111;
+}
+
+.agent-copy-toast {
+  color: #287451;
+  font-size: 8px;
+  font-weight: 800;
+}
+
+.agent-empty,
+.agent-history-empty {
+  padding: 58px 0;
+}
+
+.agent-empty > span,
+.agent-history-empty > span {
+  color: #999993;
+  font-size: 8px;
+  font-weight: 800;
+  letter-spacing: .13em;
+}
+
+.agent-empty h3,
+.agent-history-empty h3 {
+  margin: 13px 0 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 28px;
+  font-weight: 400;
+  letter-spacing: -.04em;
+}
+
+.agent-empty p,
+.agent-history-empty p {
+  max-width: 340px;
+  margin: 10px 0 0;
+  color: #888883;
+  font-size: 9px;
+  line-height: 1.6;
+}
+
+/* SEND HISTORY */
+
+.agent-send-history {
+  background: #eeeee9;
+}
+
+.agent-history-live {
+  padding: 7px 10px;
+  border: 1px solid #d4d4cf;
+  color: #777772;
+  font-size: 7px;
+  font-weight: 900;
+  letter-spacing: .1em;
+}
+
+.agent-history-list {
+  border-top: 1px solid #d7d7d2;
+}
+
+.agent-history-card {
+  display: grid;
+  grid-template-columns: 38px minmax(0, 1fr) auto;
+  gap: 18px;
+  align-items: center;
+  padding: 20px 0;
+  border-bottom: 1px solid #d7d7d2;
+}
+
+.agent-history-icon {
+  width: 30px;
+  height: 30px;
+  display: grid;
+  place-items: center;
+  border: 1px solid #9fc5ae;
+  border-radius: 50%;
+  color: #287451;
+  font-size: 11px;
+  font-weight: 900;
+}
+
+.agent-history-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.agent-history-title strong {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: -.025em;
+}
+
+.agent-history-title span {
+  color: #287451;
+  font-size: 7px;
+  font-weight: 900;
+}
+
+.agent-history-main p {
+  margin: 5px 0 0;
+  color: #555550;
+  font-size: 9px;
+}
+
+.agent-history-main small {
+  display: block;
+  margin-top: 5px;
+  color: #999993;
+  font-size: 8px;
+}
+
+.agent-history-meta {
+  text-align: right;
+}
+
+.agent-history-meta strong {
+  display: block;
+  margin-top: 7px;
+  color: #888883;
+  font-size: 7px;
+  letter-spacing: .1em;
+}
+
+/* INSIGHT */
+
+.agent-insight {
+  display: grid;
+  grid-template-columns: 60px minmax(250px, .72fr) minmax(0, 1.45fr);
+  gap: 38px;
+  padding: 76px 5.2vw;
+  background: #111;
+  color: #fff;
+}
+
+.agent-insight .agent-section-number {
+  color: #686863;
+}
+
+.agent-insight-label {
+  color: #8d8d88;
+}
+
+.agent-insight h2 {
+  margin: 18px 0 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(42px, 4vw, 64px);
+  font-weight: 400;
+  line-height: .88;
+  letter-spacing: -.06em;
+}
+
+.agent-insight h2 em {
+  -webkit-text-stroke-color: #fff;
+}
+
+.agent-insight-copy p {
+  max-width: 430px;
+  margin: 0;
+  color: #aaa9a4;
+  font-size: 11px;
+  line-height: 1.75;
+}
+
+.agent-loop {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin-top: 45px;
+  border-top: 1px solid #3a3a36;
+  border-bottom: 1px solid #3a3a36;
+}
+
+.agent-loop > div {
+  padding: 17px 15px;
+}
+
+.agent-loop > div + div {
+  border-left: 1px solid #3a3a36;
+}
+
+.agent-loop strong {
+  display: block;
+  color: #777772;
+  font-size: 8px;
+}
+
+.agent-loop span {
+  display: block;
+  margin-top: 18px;
+  font-size: 8px;
+  font-weight: 900;
+  letter-spacing: .12em;
+}
+
+.agent-footer {
+  display: grid;
+  grid-template-columns: repeat(4, auto) 1fr;
+  gap: 20px;
+  align-items: center;
+  padding: 20px 5.2vw;
+  background: #111;
+  color: #777772;
+  border-top: 1px solid #292925;
+  font-size: 7px;
+  font-weight: 900;
+}
+
+.agent-footer span {
+  justify-self: end;
+}
+
+/* STATES */
+
+.agent-state {
+  min-height: 100vh;
+  padding: 80px 5.2vw;
+  background: #f5f5f1;
+}
+
+.agent-state span {
+  color: #888883;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: .12em;
+}
+
+.agent-state h1 {
+  margin-top: 60px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(60px, 7vw, 100px);
+  font-weight: 400;
+  line-height: .82;
+  letter-spacing: -.07em;
+}
+
+.agent-state h1 em {
+  color: transparent;
+  font-style: normal;
+  -webkit-text-stroke: 1px #111;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1050px) {
+  .agent-hero-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .agent-summary {
+    grid-column: 2;
+  }
+
+  /*
+   * The action controls have two fixed-width buttons.
+   * On narrower screens they move to their own row instead
+   * of colliding with CONTROL/VALUE or overflowing the card.
+   */
+  .agent-row {
+    grid-template-columns: 30px minmax(0, 1fr) 120px;
+  }
+
+  .agent-row-approval,
+  .agent-row-actions {
+    grid-column: 2 / -1;
+  }
+
+  .agent-row-actions {
+    width: 100%;
+    min-width: 0;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 1050px) {
+  .agent-payment {
+    flex-wrap: wrap;
+  }
+
+  .agent-payment-actions {
+    justify-content: flex-start;
+    max-width: 100%;
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 760px) {
+  .agent-meta {
+    flex-direction: column;
+  }
+
+  .agent-hero-grid,
+  .agent-overview,
+  .agent-queue,
+  .agent-send-history,
+  .agent-insight {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .agent-section-number {
+    display: none;
+  }
+
+  .agent-title h1 {
+    font-size: clamp(55px, 18vw, 90px);
+  }
+
+  .agent-summary {
+    grid-column: auto;
+  }
+
+  .agent-metrics {
+    grid-template-columns: 1fr;
+  }
+
+  .agent-metric + .agent-metric {
+    border-left: 0;
+    border-top: 1px solid #d7d7d2;
+  }
+
+  .agent-row {
+    grid-template-columns: 1fr;
+  }
+
+  .agent-row-index {
+    display: none;
+  }
+
+  .agent-row-value,
+  .agent-row-approval,
+  .agent-row-actions {
+    grid-column: auto;
+  }
+
+  .agent-execution {
+    grid-column: auto;
+  }
+
+  .agent-payment {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .agent-history-card {
+    grid-template-columns: 30px 1fr;
+  }
+
+  .agent-history-meta {
+    grid-column: 2;
+    text-align: left;
+  }
+
+  .agent-loop {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .agent-loop > div:nth-child(3) {
+    border-left: 0;
+    border-top: 1px solid #3a3a36;
+  }
+
+  .agent-loop > div:nth-child(4) {
+    border-top: 1px solid #3a3a36;
+  }
+
+  .agent-footer {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .agent-footer span {
+    grid-column: 1 / -1;
+    justify-self: start;
+  }
+
+  .agent-payment-actions {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+
+  .agent-payment-actions a,
+  .agent-copy-link {
+    width: 154px;
+    min-width: 154px;
+  }
+
+  .agent-reject {
+    width: 112px;
+    min-width: 112px;
+  }
+
+  .agent-approve {
+    width: 136px;
+    min-width: 136px;
+  }
+}

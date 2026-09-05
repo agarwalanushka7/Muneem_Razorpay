@@ -1,0 +1,432 @@
+@import "tailwindcss";
+
+/* =========================================================
+   MUNEEM GLOBAL
+   ========================================================= */
+
+:root {
+  font-family:
+    Inter,
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+
+  color: #111111;
+  background: #f5f5f2;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+/* =========================================================
+   RESET
+   ========================================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  min-width: 320px;
+  min-height: 100%;
+}
+
+html {
+  background: #f5f5f2;
+}
+
+body {
+  margin: 0;
+
+  background: #f5f5f2;
+  color: #111111;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+
+/* =========================================================
+   ELEMENTS
+   ========================================================= */
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: not-allowed;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+
+/* =========================================================
+   MUNEEM APP SHELL
+   ========================================================= */
+
+.muneem-app {
+  min-height: 100vh;
+
+  background: #f5f5f2;
+}
+
+.muneem-layout {
+  display: flex;
+
+  min-height: calc(100vh - 76px);
+}
+
+.muneem-main {
+  min-width: 0;
+
+  flex: 1;
+
+  background: #f5f5f2;
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.muneem-header {
+  height: 76px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 42px;
+
+  background: #f5f5f2;
+
+  border-bottom: 1px solid #d8d8d4;
+}
+
+.muneem-header-brand {
+  display: flex;
+  align-items: center;
+
+  gap: 11px;
+}
+
+.muneem-header-logo {
+  width: 34px;
+  height: 34px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 8px;
+
+  background: #111111;
+  color: #ffffff;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.muneem-header-name {
+  color: #111111;
+
+  font-size: 14px;
+  font-weight: 800;
+
+  letter-spacing: -0.03em;
+}
+
+.muneem-header-subtitle {
+  margin-top: 3px;
+
+  color: #999995;
+
+  font-size: 8px;
+}
+
+.muneem-header-right {
+  display: flex;
+  align-items: center;
+
+  gap: 22px;
+}
+
+.muneem-account {
+  display: flex;
+  align-items: center;
+
+  gap: 9px;
+}
+
+.muneem-account-dot {
+  width: 7px;
+  height: 7px;
+
+  border-radius: 50%;
+
+  background: #22c55e;
+}
+
+.muneem-account-email {
+  color: #444440;
+
+  font-size: 9px;
+  font-weight: 600;
+}
+
+.muneem-account-label {
+  margin-top: 3px;
+
+  color: #aaa9a4;
+
+  font-size: 8px;
+}
+
+.muneem-logout {
+  height: 40px;
+
+  padding: 0 17px;
+
+  border: 1px solid #d8d8d4;
+  border-radius: 8px;
+
+  background: transparent;
+
+  color: #444440;
+
+  font-size: 9px;
+  font-weight: 650;
+
+  transition:
+    background 160ms ease,
+    border-color 160ms ease;
+}
+
+.muneem-logout:hover {
+  background: #ffffff;
+
+  border-color: #c8c8c3;
+}
+
+
+/* =========================================================
+   SCROLLBAR
+   ========================================================= */
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f5f5f2;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c7c7c3;
+
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a4;
+}
+
+
+/* =========================================================
+   SELECTION
+   ========================================================= */
+
+::selection {
+  background: #111111;
+
+  color: #ffffff;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 768px) {
+  .muneem-layout {
+    flex-direction: column;
+  }
+}
+
+
+/* =========================================================
+   SIDEBAR
+   ========================================================= */
+
+.muneem-sidebar {
+  width: 258px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  min-height: calc(100vh - 76px);
+
+  padding: 34px 16px 16px;
+
+  background: #f5f5f2;
+
+  border-right: 1px solid #d8d8d4;
+}
+
+.muneem-nav-section {
+  margin-bottom: 31px;
+}
+
+.muneem-nav-title {
+  padding: 0 14px;
+
+  margin-bottom: 12px;
+
+  color: #aaa9a4;
+
+  font-size: 8px;
+  font-weight: 750;
+
+  letter-spacing: 0.15em;
+}
+
+.muneem-nav-links {
+  display: flex;
+  flex-direction: column;
+
+  gap: 2px;
+}
+
+.muneem-nav-link {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+
+  min-height: 43px;
+
+  padding: 0 14px;
+
+  border-radius: 9px;
+
+  color: #555551;
+
+  font-size: 11px;
+  font-weight: 550;
+
+  transition:
+    background 160ms ease,
+    color 160ms ease;
+}
+
+.muneem-nav-link:hover {
+  background: #ffffff;
+
+  color: #111111;
+}
+
+.muneem-nav-link-active {
+  background: #ffffff;
+
+  color: #111111;
+
+  font-weight: 700;
+}
+
+.muneem-nav-link-active::before {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+
+  width: 3px;
+  height: 18px;
+
+  border-radius: 0 4px 4px 0;
+
+  background: #111111;
+}
+
+.muneem-sidebar-bottom {
+  margin-top: auto;
+}
+
+.muneem-sidebar-agent {
+  padding: 19px;
+
+  background: #111111;
+
+  border-radius: 13px;
+
+  color: #ffffff;
+}
+
+.muneem-sidebar-agent-title {
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+
+  color: #ffffff;
+
+  font-size: 9px;
+  font-weight: 750;
+
+  letter-spacing: 0.12em;
+}
+
+.muneem-sidebar-agent-title span {
+  width: 6px;
+  height: 6px;
+
+  border-radius: 50%;
+
+  background: #22c55e;
+}
+
+.muneem-sidebar-agent p {
+  margin: 15px 0 0;
+
+  color: #8c8c8c;
+
+  font-size: 9px;
+
+  line-height: 1.65;
+}
+
+.muneem-sidebar-footer {
+  padding: 16px 5px 0;
+
+  color: #aaa9a4;
+
+  font-size: 7px;
+
+  letter-spacing: 0.08em;
+}
