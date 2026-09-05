@@ -1,388 +1,274 @@
-MUNEEM --- Agentic AI Revenue Intelligence
+MUNEEM 💰
 
-MUNEEM is an agentic AI revenue intelligence system for merchants.
+AI-Powered Revenue Intelligence for Merchants
 
-It connects commerce data with an approval-controlled action workflow:
+MUNEEM helps merchants find missed revenue opportunities, recommend the right action, get merchant approval, execute through Razorpay, and track the actual payment outcome.
 
-Revenue signal → Opportunity → Recommendation → Merchant approval →
-Execution → Payment → Measurable revenue
+Detect → Recommend → Approve → Execute → Pay → Measure
 
-What problem does MUNEEM solve?
+✨ What MUNEEM Does
 
-Merchants already have customer, product, order, inventory, and
-transaction data, but potential revenue opportunities often remain
-hidden in that data.
+📊 Reads customer, product and order data
 
-MUNEEM turns that into a controlled workflow. It identifies revenue
-opportunities, recommends an appropriate action, keeps the merchant in
-control, executes approved actions through Razorpay, and tracks the
-resulting payment outcome.
+🤖 Detects potential revenue opportunities
 
-Instead of only saying:
+💡 Recommends an action dynamically
 
-"There is a revenue opportunity."
+👤 Keeps the merchant in control with approval
 
-MUNEEM helps move the opportunity toward:
+💳 Creates Razorpay payment links
 
-"Here is the opportunity, here is the recommended action, approve it,
-and MUNEEM will execute the permitted action and measure the result."
+🔄 Syncs actual payment status from Razorpay
 
-Why is MUNEEM agentic AI?
+📈 Tracks recovered revenue and execution history
 
-MUNEEM operates across a multi-step workflow rather than only generating
-text.
+🧾 Maintains an audit trail
 
-Perceive: understand customer, product, order, inventory, and
-transaction context.
+The key idea
 
-Reason: identify a revenue opportunity and an appropriate
-action.
+AI handles the intelligence.
+The backend handles reliable execution.
 
-Recommend: present the action to the merchant.
+🛠️ Tech Stack
 
-Act: execute only after merchant approval.
-
-Observe: obtain the current payment state from Razorpay.
-
-Measure: record the outcome and calculate recovered revenue.
-
-Core principle:
-
-AI handles intelligence and recommendation; deterministic backend
-services handle execution and payment operations.
-
-Core workflow
-
-Commerce Data
-     |
-     v
-Opportunity Intelligence
-     |
-     v
-Agent Recommendation
-     |
-     v
-Merchant Approval
-     |
-     v
-Action Executor
-     |
-     v
-Razorpay Payment Link
-     |
-     v
-Customer Payment
-     |
-     v
-Payment Synchronization
-     |
-     v
-Revenue + Audit + Dashboard
-
-Key features
-
-Commerce data
-
-Customer records
-
-Product records
-
-Inventory context
-
-Order history
-
-Transaction values
-
-Payment state
-
-Revenue intelligence
-
-Opportunity detection
-
-Estimated opportunity value
-
-Recommended revenue actions
-
-Customer/product context
-
-Agent action workflow
-
-Pending approval
-
-Merchant approval
-
-Controlled execution
-
-Execution result tracking
-
-Payments
-
-Razorpay Payment Links
-
-Dynamic payment amounts
-
-Payment status synchronization
-
-Paid/pending state separation
-
-Recovered revenue based on successful payments
-
-Auditability
-
-Opportunity/action history
-
-Merchant approvals
-
-Execution events
-
-Payment outcomes
-
-Business context attached to events
-
-Architecture
-
-                    +----------------------+
-                    |    React Frontend    |
-                    | Dashboard / Revenue  |
-                    | Customers / Products |
-                    | Orders / Actions     |
-                    | Audit                |
-                    +----------+-----------+
-                               |
-                               v
-                    +----------------------+
-                    |     FastAPI API       |
-                    +----------+-----------+
-                               |
-              +----------------+----------------+
-              |                |                |
-              v                v                v
-       Opportunity       Agent Action       Payment
-         Services          Services          Services
-              |                |                |
-              +----------------+----------------+
-                               |
-                               v
-                       +---------------+
-                       |   Database    |
-                       +---------------+
-                               |
-                               v
-                       +---------------+
-                       |   Razorpay    |
-                       +---------------+
-
-Important state model
-
-MUNEEM separates action state from payment state.
-
-AgentAction
-
-pending_approval
-       ↓
-approved
-       ↓
-executed
-
-Payment
-
-created / pending
-       ↓
-paid
-
-These are different states.
-
-An action can be:
-
-AgentAction = executed
-Payment     = pending
-
-because MUNEEM successfully performed the permitted operation but the
-customer has not paid yet.
-
-After payment:
-
-AgentAction = executed
-Payment     = paid
-
-Revenue definition
-
-MUNEEM separates existing merchant revenue from revenue recovered
-through MUNEEM actions.
-
-Total revenue: value of recorded commerce orders.
-
-Opportunity value: potential value identified by MUNEEM.
-
-Recovered revenue: money associated with successfully paid
-MUNEEM payment records.
-
-A generated payment link or approved action is not treated as
-recovered revenue.
+Layer
 
 Technology
 
 Frontend
 
-React
-
-TypeScript
-
-Vite
-
-CSS
+React + TypeScript + Vite
 
 Backend
 
-Python
+FastAPI + Python
 
-FastAPI
+Database
 
-SQLAlchemy
+SQLite / SQLAlchemy
 
-SQLite/database layer
+AI
 
-Service/repository architecture
+LLM-based opportunity & recommendation flow
 
 Payments
 
-Razorpay Payment Links
+Razorpay
 
-Data
+Styling
 
-CSV-based commerce data ingestion
+CSS
 
-Database-backed customer/product/order/action/payment records
+🚀 Run MUNEEM Locally
 
-Main application areas
+1. Download the project
 
-Dashboard --- merchant-level overview and MUNEEM pipeline
+Option A — Clone with Git
 
-Revenue --- revenue, opportunity value, recovered revenue, and
-action pipeline
+Open Command Prompt / Terminal and run:
 
-Agent Actions --- review, approve, and execute recommended
-actions
+git clone https://github.com/agarwalanushka7/Muneem_Razorpay.git
+cd Muneem_Razorpay
 
-Customers --- customer commerce records
+Option B — Download ZIP
 
-Products --- product and inventory records
+Open the GitHub repository.
 
-Orders --- transaction ledger
+Click Code → Download ZIP.
 
-Audit Log --- action, approval, execution, and payment history
+Extract the ZIP file.
 
-Running the project
+Open the extracted Muneem_Razorpay folder in VS Code.
 
-Backend
+2. Backend Setup
 
-From the project root:
+Open a terminal inside the project folder:
+
+cd src/backend
+
+Create a virtual environment:
+
+Windows
+
+python -m venv venv
+venv\Scripts\activate
+
+macOS / Linux
+
+python3 -m venv venv
+source venv/bin/activate
+
+Install dependencies:
+
+pip install -r requirements.txt
+
+3. Add Environment Variables
+
+Create a .env file in the backend/project location expected by the application.
+
+Add your Razorpay credentials:
+
+RAZORPAY_KEY_ID=your_key_id
+RAZORPAY_KEY_SECRET=your_key_secret
+
+Never upload .env or your secret keys to GitHub.
+
+4. Start the Backend
+
+From the project root, run:
 
 uvicorn src.backend.main:app --reload
 
-API:
+Backend:
 
 http://127.0.0.1:8000
 
-Swagger:
+API documentation:
 
 http://127.0.0.1:8000/docs
 
-Frontend
+5. Start the Frontend
 
-From the frontend directory:
+Open a new terminal.
+
+Go to the frontend:
+
+cd src/frontend
+
+Install packages:
 
 npm install
+
+Start the application:
+
 npm run dev
 
-Application:
+Open the URL shown in the terminal, usually:
 
 http://localhost:5173
 
-Payment synchronization
+📂 Project Structure
 
-MUNEEM uses:
+Muneem_Razorpay/
+│
+├── src/
+│   ├── backend/
+│   │   ├── api/
+│   │   ├── models/
+│   │   ├── services/
+│   │   ├── database.py
+│   │   └── main.py
+│   │
+│   └── frontend/
+│       ├── src/
+│       │   ├── pages/
+│       │   ├── components/
+│       │   └── main.tsx
+│       └── vite.config.ts
+│
+├── README.md
+└── .gitignore
+
+📥 Using Your Own Data
+
+MUNEEM is designed to work with dynamic merchant data, rather than fixed customer or product examples.
+
+A typical order dataset contains:
+
+customer_name
+customer_email
+customer_phone
+product_name
+product_price
+product_category
+product_inventory
+quantity
+total_amount
+order_date
+order_status
+payment_status
+
+To use your own merchant data, provide the data in the format expected by the application's data/import flow.
+
+After the data is loaded, MUNEEM can use the customer, product and order records to identify opportunities dynamically.
+
+🔄 How the System Works
+
+Customer / Order Data
+        ↓
+Opportunity Detection
+        ↓
+AI Recommendation
+        ↓
+Merchant Approval
+        ↓
+Razorpay Payment Link
+        ↓
+Customer Payment
+        ↓
+Payment Status Sync
+        ↓
+Recovered Revenue
+
+Important
+
+Approved/Executed does not automatically mean Paid.
+
+MUNEEM keeps these states separate:
+
+AgentAction.status → execution state
+
+Payment.status → actual payment state
+
+This prevents generated payment links from being incorrectly counted as recovered revenue.
+
+💳 Payment Status Sync
+
+MUNEEM can fetch the latest payment state from Razorpay through the payment synchronization endpoint:
 
 POST /payments/sync
 
-The synchronization process:
+This updates the local payment record using the actual Razorpay payment-link status.
 
-Finds MUNEEM actions containing payment information.
+🔐 Security
 
-Gets the current payment-link state from Razorpay.
+Do not commit:
 
-Updates the corresponding Payment record.
+.env
+.env.*
+venv/
+.venv/
+node_modules/
+__pycache__/
 
-Stores current payment metadata in the execution result.
+Never expose your Razorpay secret key or other API credentials.
 
-Keeps AgentAction.status separate from payment status.
+🎯 Why MUNEEM?
 
-Payment synchronization does not execute an agent action again.
+Most systems stop at:
 
-Dynamic data
+“Here is a revenue opportunity.”
 
-The application is database/API-driven.
+MUNEEM goes one step further:
 
-The production flow should not depend on hardcoded: - customer names -
-customer IDs - product IDs - prices - action IDs - payment amounts -
-recommendations
+“Here is the opportunity → here is the recommended action → approve it → execute it → track the payment → measure the revenue.”
 
-Seed/demo data can be used for demonstration, but the application
-operates on the records available through the backend.
+That closes the gap between revenue intelligence and revenue execution.
 
-Security and control model
+👩‍💻 Local Development Checklist
 
-MUNEEM is designed around bounded agency:
+☐ Clone / download the repository
+☐ Open the project in VS Code
+☐ Create Python virtual environment
+☐ Install backend requirements
+☐ Add Razorpay credentials to .env
+☐ Start FastAPI backend
+☐ Install frontend dependencies
+☐ Start React frontend
+☐ Open localhost:5173
 
-AI recommendation
-       ↓
-Merchant approval
-       ↓
-Deterministic execution
-       ↓
-External payment provider
+📌 Repository
 
-The AI recommendation layer does not directly perform an external
-payment operation.
+MUNEEM — AI Revenue Intelligence for Merchants
 
-Future improvements
-
-Razorpay webhooks for event-driven payment synchronization
-
-Stronger idempotency guarantees for external actions
-
-More sophisticated opportunity scoring
-
-Conversion feedback loops
-
-More commerce platform integrations
-
-Background job processing
-
-Role-based merchant permissions
-
-Production database and deployment infrastructure
-
-Demo narrative
-
-The strongest demonstration is:
-
-Customer / Product / Order data
-            ↓
-Revenue opportunity
-            ↓
-Recommended action
-            ↓
-Merchant approval
-            ↓
-Razorpay payment link
-            ↓
-Customer payment
-            ↓
-Payment synchronization
-            ↓
-Recovered revenue
-            ↓
-Audit trail
-
-MUNEEM turns revenue signals into controlled, measurable actions.
+Built for a Razorpay-focused buildathon.
